@@ -1,0 +1,25 @@
+<title>JS Secrets Scanner</title>
+<!--<link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<div class="container" class="d-flex flex-wrap align-content-center">
+      <center>
+            <h2>JS Secrets Scanner</h2>
+      </center>
+      <form action="" method="post" role="form">
+
+            <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" class="form-control" id="url" name="url" value="https://books.toscrape.com"
+                        placeholder="domain to scrape">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      {% if submit %}
+      <div class="alert alert-info">
+            <strong>Success! Domain queued for scraping, redirecting to results. . .</strong>
+      </div>
+      {% endif %}
+
+</div>

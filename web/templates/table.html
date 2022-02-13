@@ -1,0 +1,31 @@
+<title>JS Secrets Scanner</title>
+<!--<link rel="stylesheet" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+    <h2>JS Secrets Scanner</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                {% for header in headings%}
+                <th scope="col">{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        {% for row in data%}
+        {% set outer_loop = loop %}
+        {% for value in row['findings']%}
+        <tbody>
+            <tr>
+                <th scope="row">{{ outer_loop.index }}</th>
+                <td>{{ value.url }}</td>
+                <td>{{ value.leaked_secrets }}</td>
+                <td class="w-25">{{ value.artifacts }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+        {% endfor %}
+    </table>
+
+</div>
