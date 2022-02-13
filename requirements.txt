@@ -1,0 +1,6 @@
+beautifulsoup4==4.10.0
+crochet==2.0.0
+Flask==1.1.2
+Flask_Executor==0.10.0
+itemadapter==0.4.0
+Scrapy==2.5.1
