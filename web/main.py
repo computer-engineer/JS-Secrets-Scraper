@@ -52,9 +52,10 @@ def results():
             data = json.load(f)
             return render_template("table.html", headings=headings, data=data)
         except Exception as ex:
-            return "Formatting results, reload page for update. .  ."
+            return """Formatting results <img src="https://cutewallpaper.org/21/loading-gif-transparent-background/Tag-For-Loading-Bar-Gif-Transparent-Loading-Gif-.gif" height="10" width="10">   <meta http-equiv="refresh" content="5">"""
     else:
-        return "Waiting for the results, reload page for update. .  ."
+        return """Waiting for the results <img src="https://cutewallpaper.org/21/loading-gif-transparent-background/Tag-For-Loading-Bar-Gif-Transparent-Loading-Gif-.gif" height="10" width="10">   <meta http-equiv="refresh" content="5">"""
+
 
 
 if __name__== "__main__":
